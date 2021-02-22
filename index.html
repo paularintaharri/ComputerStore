@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Computer store</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1">Computer store</span>
+            </div>
+          </nav>
+    </header>
+    <div>
+        <!-- Top Cards -->
+        <div class="container">
+            <div class="row">
+                <div class="card text-center col-sm">
+                    <div class="card-body" id="myBank">
+                        <h5 class="card-title">Joe Banker</h5>
+                        <span class="card-text">Loan: </span>
+                        <span class="card-text" id="loanBalance">0 €</span>
+                        <br>
+                        <span class="card-text">Balance: </span>
+                        <span class="card-text" id="bankBalance">0 €</span>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button type="button" class="btn btn-primary" id="getLoanButton">Get a loan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card text-center col-sm">
+                    <div class="card-body" >
+                        <h5 class="card-title">Work</h5>
+                        <span class="card-text">Pay: </span>
+                        <span class="card-text"id="workBalance"> 0 €</span>
+                        <div class="d-grid gap-2 col-6 mx-auto" id="workCard">
+                            <button type="button" class="btn btn-primary" id="bankButton">Bank</button>
+                            <button type="button" class="btn btn-primary" id="workButton">Work</button>
+                            <button type="button" class="btn btn-primary" id="repayLoanButton">Repay Loan</button>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="card text-center col-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptops</h5>
+                        <select class="form-select form-select-sm" aria-label="Select laptop model" name="computers" id="computers">
+                            <option selected value="0">Asus Laptop 15</option>
+                            <option value="1" >MacBook Pro 13</option>
+                            <option value="2">Lenovo Yoga Slim 7</option>
+                            <option value="3">HP Envy x360</option>
+                        </select>
+                        <h5 class="card-title">Features</h5>
+                        <span card-text id="laptopSpecs"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Cards -->
+            <div class="row">
+                <div class="card text-center col">
+                    <div class="card-body row">
+                        <div class="col">
+                            <img class="img rounded float-start" id="laptopImage" src="#" alt="laptop"/>
+                        </div>
+                        <div class="col ">
+                            <h5 class="card-title" id="laptopModel"></h5>
+                            <span class="card-text" id="laptopInfo"></span>
+                        </div>
+                        <div class="col ">                        
+                            <span class="card-text" id="laptopPrice"></span>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button type="button" class="btn btn-primary" id="buyComputer" >Buy now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
