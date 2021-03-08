@@ -89,7 +89,6 @@ document.getElementById("getLoanButton").addEventListener("click", function() {
 });
 
 document.getElementById("repayLoanButton").addEventListener("click", function() {
-    console.log("klik")
     if (workBalance >= loanBalance){
         bankBalance = bankBalance + (workBalance - loanBalance);
         loanBalance = 0;
@@ -112,10 +111,16 @@ document.getElementById("workButton").addEventListener("click", function() {
 });
 
 document.getElementById("bankButton").addEventListener("click", function() {
-    bankBalance = bankBalance + workBalance;
+    if (loanBalance != 0){
+        bankBalance = bankBalance + (workBalance * 0.9);
+        loanBalance = loanBalance - (workBalance * 0.1)
+    } else {
+        bankBalance = bankBalance + workBalance;
+    }
     workBalance = 0;
     document.getElementById("workBalance").innerHTML = workBalance + " €";
     document.getElementById("bankBalance").innerHTML = bankBalance + " €";
+    document.getElementById("loanBalance").innerHTML = loanBalance + " €";
 });
 
 document.getElementById("buyComputer").addEventListener("click", function() {
